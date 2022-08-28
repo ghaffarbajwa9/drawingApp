@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Drawing</title>
     <style>
         body{
             height: 200px;
@@ -20,12 +20,24 @@
             0 0 100px #03e9f4;;
             position: absolute;
         }
+        header{
+            background-color: aliceblue;
+            width: auto;
+            height: 50px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            font: 600 1.5rem 'Montserrat';
+        }
     </style>
 </head>
 <body>
-
+<header>
+Use Mouse to Draw
+</header>
     <script>
- 
  window.addEventListener("mousedown", event =>{
     if(event.button == 0){
         window.addEventListener("mousemove", moved);
