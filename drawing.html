@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body{
+            height: 200px;
+            background: rgb(26, 26, 21);
+        }
+        .dot{
+            height: 8px; width: 8px;
+            border-radius: 2px;
+            background: rgb(252, 252, 255);
+            box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 100px #03e9f4;;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+ 
+ window.addEventListener("mousedown", event =>{
+    if(event.button == 0){
+        window.addEventListener("mousemove", moved);
+    }
+
+ }); 
+ function moved(event){
+    if(event.buttons == 0){
+        window.removeEventListener("mousedown", moved)
+    }else{
+        let dot = document.createElement("div");
+        dot.className = "dot";
+        dot.style.left = (event.pageX - 4) + "px";
+        dot.style.top = (event.pageY - 4) + "px";
+        document.body.appendChild(dot);
+    }
+ }
+    </script>
+</body>
+</html>
